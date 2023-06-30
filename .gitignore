@@ -1,2 +1,7 @@
 .idea
 *.svg
+*.class
+.vscode
+*/out/*
+input.txt
+output.txt
