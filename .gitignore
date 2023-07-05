@@ -2,7 +2,7 @@
 *.svg
 *.class
 .vscode
-*/out/*
+**/out/*
 input.txt
 output.txt
 spoj/tempCodeRunnerFile.cpp
