@@ -64,7 +64,7 @@ pair<ull, ull> power2_dig_sum_custom(int n)
     return {memnum, sum};
 }
 
-// https://projecteuler.net/problem=16
+// https://projecteuler.net/problem=17
 int main()
 {
 
