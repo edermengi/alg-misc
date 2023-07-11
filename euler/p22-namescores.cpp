@@ -45,7 +45,7 @@ int total_scores()
     return sum;
 }
 
-// https://projecteuler.net/problem=21
+// https://projecteuler.net/problem=22
 int main()
 {
 #ifndef ONLINE_JUDGE
