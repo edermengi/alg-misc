@@ -13,7 +13,52 @@ using namespace std;
 
 typedef unsigned long long ull;
 
-string solution()
+void swap(char *s, int a, int b)
+{
+    char temp = s[a];
+    s[a] = s[b];
+    s[b] = temp;
+}
+
+// https://www.quickperm.org/soda_submit.php
+int permute(char *str, int len)
+{
+    int key = len - 1;
+    int newKey = len - 1;
+    while (key > 0 && (str[key] <= str[key - 1]))
+        key--;
+
+    key--;
+    if (key < 0)
+        return 0;
+    newKey = len - 1;
+    while ((newKey > key) && (str[newKey] <= str[key]))
+        newKey--;
+    swap(str, key, newKey);
+    len--;
+    key++;
+    while (len > key)
+    {
+        swap(str, len, key);
+        key++;
+        len--;
+    }
+    return 1;
+}
+
+string solution_sepa()
+{
+    char s[] = "0123456789";
+    int len = strlen(s);
+    for (int i = 1; i < 1000000; i++)
+    {
+        permute(s, len);
+    }
+
+    return string(s);
+}
+
+string solution_bf()
 {
     vector<char> digits = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
     int count = 0;
@@ -84,7 +129,7 @@ int main()
     auto start = std::chrono::high_resolution_clock::now();
 #endif
 
-    cout << solution() << endl;
+    cout << solution_sepa() << endl;
 
 #ifndef ONLINE_JUDGE
     auto stop = std::chrono::high_resolution_clock::now();
