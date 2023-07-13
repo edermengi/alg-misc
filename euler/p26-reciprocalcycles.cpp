@@ -28,7 +28,7 @@ string substr(vector<int> &arr, int start, int count)
     return s;
 }
 
-int rec_cycle(int limit)
+void rec_cycle(int limit)
 {
     int max_d = 0;
     int max_match_len = 0;
@@ -143,8 +143,7 @@ int main()
     auto start = std::chrono::high_resolution_clock::now();
 #endif
 
-    cout << rec_cycle(1000) << endl;
-
+    rec_cycle(1000);
     // ex26();
 
 #ifndef ONLINE_JUDGE
