@@ -47,7 +47,7 @@ int numDigits(int x)
         return 2;
     return 1;
 }
-// https://projecteuler.net/problem=29
+// https://projecteuler.net/problem=32
 int main()
 {
 #ifndef ONLINE_JUDGE
